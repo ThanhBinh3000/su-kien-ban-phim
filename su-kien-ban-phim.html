@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím</title>
+</head>
+<body onload="docReady()">
+<img id="uchiha" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsBYGL3cAGzFrcH9B-_uHqfruOE3RIKvKvmA&usqp=CAU" style="position: absolute;left: 0; top: 0;" height="200" width="200"/>
+<script>
+    function uzumaki() {
+        let obito = document.getElementById("uchiha");
+        obito.style.top = parseInt(obito.style.top) -5 +'px';
+    }
+    function senju() {
+        let obito = document.getElementById("uchiha");
+        obito.style.top = parseInt(obito.style.top) +5 + 'px';
+    }
+    function sarutobi() {
+        let obito = document.getElementById("uchiha")
+        obito.style.left = parseInt(obito.style.left) -5 + 'px';
+    }
+    function hygua() {
+        let obito = document.getElementById("uchiha")
+        obito.style.left = parseInt(obito.style.left) +5 + 'px';
+    }
+    function otosuki(evt) {
+        switch (evt.keyCode){
+            case 37:
+                sarutobi();
+                break;
+            case 39:
+                hygua();
+                break;
+            case 38:
+                uzumaki();
+                break;
+            case 40:
+                senju();
+                break;
+            
+        }
+    }
+function docReady() {
+    window.addEventListener('keydown', otosuki)
+}
+</script>
+</body>
+</html>
